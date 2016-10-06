@@ -8,14 +8,25 @@ int main() {
   double xs[3], ys[3];
   int i;
   for(i = 0; i < 3; ++i) {
-    printf("ばね%d:\n", i);
+    printf("ばね%d:\n", i+1);
     printf("ばね定数?:\n");
-    scanf("%e",  spring_constants + i * sizeof(double));
+    scanf("%lf",  spring_constants + i);
     printf("自然長?:\n");
-    scanf("%e",  naturals + i * sizeof(double));
+    scanf("%lf",  naturals + i);
     printf("X座標?:\n");
-    scanf("%e",  xs + i * sizeof(double));
+    scanf("%lf",  xs + i);
     printf("Y座標?:\n");
-    scanf("%e",  ys + i * sizeof(double));
+    scanf("%lf",  ys + i);
+  }
+  for(i = 0; i < 3; ++i) {
+    printf("ばね%d:\n", i+1);
+    printf("ばね定数: ");
+    printf("%lf\n",  spring_constants[i]);
+    printf("自然長: ");
+    printf("%lf\n",  naturals[i]);
+    printf("X座標: ");
+    printf("%lf\n",  xs[i]);
+    printf("Y座標: ");
+    printf("%lf\n",  ys[i]);
   }
 }
