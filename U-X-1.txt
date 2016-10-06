@@ -1,0 +1,1 @@
+find UX1data -type f -name "DSC[0-9][0-9][0-9].txt" -exec basename {} \;  | sort  | xargs -I {} find -type f -name {}  | xargs cat
