@@ -64,7 +64,7 @@ int main() {
     current[0] += dx;
     current[1] += dy;
 //    puts("");
-    printf("%lf, %lf\n", current[0], current[1]);
+//    printf("%lf, %lf\n", current[0], current[1]);
 
     if (sqrt(pow(prev[0] - current[0], 2) + pow(prev[1] - current[1], 2)) < eps) {
       break;
